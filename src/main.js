@@ -18,7 +18,7 @@ Vue.use(VueScrollTo, {
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   loading: '/loading.gif',
-  attempt: 3,
+  attempt: 1,
   error: '/error.png'
 })
 
