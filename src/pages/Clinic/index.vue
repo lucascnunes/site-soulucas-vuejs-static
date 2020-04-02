@@ -13,7 +13,7 @@
           <div class="balao animated fadeInLeft delay-2s">
             Está precisando de atendimento odontológico ?! <br>
             Somos especializados em estética e reabilitação oral. <br>
-            Marque uma consulta através do telefone <a href="tel:552433463514" class="telefone">(24) 3346-3514</a>
+            Marque uma consulta através do telefone <a href="tel:+552433463514" class="telefone">(24) 3346-3514</a>
           </div>
           <div class="balao animated fadeInLeft delay-3s">
             Estamos em <strong>Volta Redonda</strong>, Rio de Janeiro. <br> Para nos encontrar vou lhe enviar um mapa:
