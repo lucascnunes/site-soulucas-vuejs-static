@@ -104,6 +104,9 @@ i {
   display: inline-block;
   padding: 3px;
 }
+.arrow {
+  mix-blend-mode: difference;
+}
 
 .right {
   transform: rotate(-45deg);

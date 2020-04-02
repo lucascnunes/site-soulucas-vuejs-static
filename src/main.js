@@ -9,6 +9,8 @@ import VueScrollTo from 'vue-scrollto'
 
 import VueLazyload from 'vue-lazyload'
 
+import VueAnalytics from 'vue-analytics'
+
 Vue.config.productionTip = false
 
 Vue.use(VueFullpage)
@@ -21,7 +23,10 @@ Vue.use(VueLazyload, {
   attempt: 1,
   error: '/error.png'
 })
-
+Vue.use(VueAnalytics, {
+  id: 'UA-20421706-12',
+  router
+})
 new Vue({
   render: h => h(App),
   router

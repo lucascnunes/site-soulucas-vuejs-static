@@ -47,16 +47,6 @@
   </div>
 </template>
 
-
-<script>
-export default {
-  created() {
-    console.log(this.$route.meta)
-  }
-}
-</script>
-
-
 <style scoped>
 .container {
   margin: 80px 30px;
