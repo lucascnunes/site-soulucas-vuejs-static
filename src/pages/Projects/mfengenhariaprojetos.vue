@@ -8,8 +8,10 @@
       Foi requistado pelo cliente um novo layout e exibição de fotografias de obras realizadas e com isso em 2018 foi desenvolvido um novo site institucional para divulgação da empresa e apresentação dos serviços oferecidos pela mesma, com fotografias e vídeo.
     </p>
     <p class="text-center">
-      <img v-lazy="'/projetos/mfengenhariaprojetos/logo.svg'" alt="mfengenhariaprojetos" class="project-logo">
-      <a class="img-fluid" href="/projetos/mfengenhariaprojetos/hero.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/mfengenhariaprojetos/hero.png'" alt="mfengenhariaprojetos"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/mfengenhariaprojetos/logo.svg" src="/projetos/mfengenhariaprojetos/logo.svg" alt="mfengenhariaprojetos" class="project-logo">
+      <a class="img-fluid" href="/projetos/mfengenhariaprojetos/hero.png" rel="noopener noreferrer" target="_blank">
+      <img v-gallery:mf v-lazyload data-err="/error.png" data-src="/projetos/mfengenhariaprojetos/hero.png" src="/projetos/mfengenhariaprojetos/hero.png" alt="mfengenhariaprojetos">
+      </a>
     </p>
     <h2 class="mt-10">
       Empresa
@@ -24,7 +26,7 @@
       A mesma foi feita utilizando <strong>Laravel</strong> para melhorar o SEO e a estilização foi feita utilizando <strong>Bootstrap</strong>. <br>
       Em sua administração o cliente possui controle total da exibição de imagens dividos em obras realizadas e serviços oferecidos.
     </p>
-    <a class="img-fluid" href="/projetos/mfengenhariaprojetos/fullscreen.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/mfengenhariaprojetos/fullscreen.png'" alt="mfengenhariaprojetos"></a>
+    <img v-gallery:mf v-lazyload data-err="/error.png" data-src="/projetos/mfengenhariaprojetos/fullscreen.png" src="/projetos/mfengenhariaprojetos/fullscreen.png" alt="mfengenhariaprojetos">
   </div>
 </template>
 

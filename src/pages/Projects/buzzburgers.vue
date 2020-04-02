@@ -8,8 +8,8 @@
       A plataforma foi criada em 2018 como site promocional e institucional e oferece o controle do cardápio virtual com cadastro de promoções, e exibição de informações da hamburgueria.
     </p>
     <p class="text-center">
-      <img v-lazy="'/projetos/buzzburgers/logo.png'" alt="buzzburgers" class="project-logo">
-      <a class="img-fluid" href="/projetos/buzzburgers/hero.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/buzzburgers/hero.png'" alt="buzzburgers"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/buzzburgers/logo.png" src="/projetos/buzzburgers/logo.png" alt="buzzburgers" class="project-logo"/>
+      <img v-gallery:buzz v-lazyload data-err="/error.png" data-src="/projetos/buzzburgers/hero.png" src="/projetos/buzzburgers/hero.png" alt="buzzburgers"/>
     </p>
     <h2 class="mt-10">
       Missão
@@ -24,7 +24,7 @@
       A mesma foi feita utilizando <strong>Laravel</strong> para melhorar o SEO e a estilização foi feita utilizando <strong>Bootstrap</strong>. <br>
       Não foi feito sistema de pedido de lanches pois a empresa utiliza aplicativo de terceiros para o mesmo.
     </p>
-    <a class="img-fluid" href="/projetos/buzzburgers/fullscreen.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/buzzburgers/fullscreen.png'" alt="buzzburgers"></a>
+    <img v-gallery:buzz v-lazyload data-err="/error.png" data-src="/projetos/buzzburgers/fullscreen.png" src="/projetos/buzzburgers/fullscreen.png" alt="buzzburgers"/>
   </div>
 </template>
 

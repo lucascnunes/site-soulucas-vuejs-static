@@ -16,8 +16,8 @@
         </ul>
     </p>
     <p class="text-center">
-      <img v-lazy="'/projetos/cacdocs/logo.svg'" alt="cacdocs" class="project-logo">
-      <a class="img-fluid" href="/projetos/cacdocs/hero.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/cacdocs/hero.png'" alt="cacdocs"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/cacdocs/logo.svg" src="/projetos/cacdocs/logo.svg" alt="cacdocs" class="project-logo">
+      <img v-gallery:cacdocs v-lazyload data-err="/error.png" data-src="/projetos/cacdocs/hero.png" src="/projetos/cacdocs/hero.png" alt="cacdocs">
     </p>
     <h2 class="mt-10">
       Missão
@@ -33,7 +33,7 @@
       A estilização foi feita utilizando <strong>Bootstrap</strong>. <br>
       Para pagamento é utilizado o pacote <strong><a href="https://github.com/artistas/laravel-pagseguro" rel="noopener noreferer">Artistas - Laravel-pagseguro</a></strong> disponível no GitHub, possibilitando assim o <strong>checkout transparente</strong> e <strong>geração de boletos</strong>.
     </p>
-    <a class="img-fluid" href="/projetos/cacdocs/fullscreen.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/cacdocs/fullscreen.png'" alt="cacdocs"></a>
+    <img v-gallery:cacdocs v-lazyload src="/projetos/cacdocs/fullscreen.png" data-err="/error.png" data-src="/projetos/cacdocs/fullscreen.png" alt="cacdocs">
   </div>
 </template>
 

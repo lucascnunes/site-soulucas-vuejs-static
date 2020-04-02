@@ -8,8 +8,8 @@
       A plataforma foi criada em 2018 para agendamento online de contratação de serviços prestados pela empresa e apresentação de serviços oferecidos por parceiros.
     </p>
     <p class="text-center">
-      <img v-lazy="'/projetos/personalcarpf/logo.svg'" alt="personalcarpf" class="project-logo">
-      <a class="img-fluid" href="/projetos/personalcarpf/hero.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/personalcarpf/hero.png'" alt="personalcarpf"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/personalcarpf/logo.svg" src="/projetos/personalcarpf/logo.svg" alt="personalcarpf" class="project-logo">
+      <img v-gallery:personal src="/projetos/personalcarpf/hero.png" v-lazyload data-err="/error.png" data-src="/projetos/personalcarpf/hero.png" alt="personalcarpf">
     </p>
     <h2 class="mt-10">
       Empresa
@@ -24,7 +24,7 @@
       A mesma foi feita utilizando <strong>Laravel</strong> para melhorar o SEO e a estilização foi feita utilizando <strong>Bootstrap</strong>. <br>
       Em sua administração o cliente possui controle total de agendamentos e confirmações automatizadas por e-mail, e da exibição de serviços oferecidos.
     </p>
-    <a class="img-fluid" href="/projetos/personalcarpf/fullscreen.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/personalcarpf/fullscreen.png'" alt="personalcarpf"></a>
+    <img v-gallery:personal src="/projetos/personalcarpf/fullscreen.png" v-lazyload data-err="/error.png" data-src="/projetos/personalcarpf/fullscreen.png" alt="personalcarpf">
   </div>
 </template>
 

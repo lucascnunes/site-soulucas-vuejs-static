@@ -8,8 +8,8 @@
       A plataforma foi criada em 2018 como site institucional para a empresa e apresentação de suas serviços realizados e oferecidos.
     </p>
     <p class="text-center">
-      <img v-lazy="'/projetos/d3engenharia/logo.svg'" alt="d3engenharia" class="project-logo">
-      <a class="img-fluid" href="/projetos/d3engenharia/hero.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/d3engenharia/hero.png'" alt="d3engenharia"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/d3engenharia/logo.svg" src="/projetos/d3engenharia/logo.svg" alt="d3engenharia" class="project-logo">
+      <img v-gallery:d3 v-lazyload data-err="/error.png" data-src="/projetos/d3engenharia/hero.png" src="/projetos/d3engenharia/hero.png" alt="d3engenharia">
     </p>
     <h2 class="mt-10">
       Empresa
@@ -24,7 +24,7 @@
       A mesma foi feita utilizando <strong>Laravel</strong> para melhorar o SEO e a estilização foi feita utilizando <strong>Bootstrap</strong>. <br>
       Em sua administração o cliente possui controle total da exibição de imagens dividos em obras realizadas e serviços oferecidos.
     </p>
-    <a class="img-fluid" href="/projetos/d3engenharia/fullscreen.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/d3engenharia/fullscreen.png'" alt="d3engenharia"></a>
+    <img v-gallery:d3 v-lazyload data-err="/error.png" data-src="/projetos/d3engenharia/fullscreen.png" src="/projetos/d3engenharia/fullscreen.png" alt="d3engenharia">
   </div>
 </template>
 

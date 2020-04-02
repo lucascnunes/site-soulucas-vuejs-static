@@ -23,8 +23,8 @@
         </ul>
     </p>
     <p class="text-center">
-      <img v-lazy="'/projetos/cicuta/logo.svg'" alt="cicuta" class="project-logo">
-      <a class="img-fluid" href="/projetos/cicuta/hero.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/cicuta/hero.png'" alt="cicuta"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/cicuta/logo.svg" src="/projetos/cicuta/logo.svg" alt="cicuta" class="project-logo">
+      <img v-gallery:cicuta v-lazyload data-err="/error.png" data-src="/projetos/cicuta/hero.png" src="/projetos/cicuta/hero.png" alt="cicuta">
     </p>
     <h2 class="mt-10">
       Sobre o clube
@@ -39,7 +39,7 @@
       A mesma foi feita utilizando <strong>Laravel</strong> para melhorar o SEO e a estilização foi feita utilizando <strong>Bootstrap</strong>. <br>
       Para pagamento de anuidades é utilizado o pacote da <strong><a href="https://dev.gerencianet.com.br/docs/gerar-boleto" rel="noopener noreferer">Gerencianet</a></strong> para geração de boletos, possibilitando assim que o próprio associado emita seu boleto de pagamento anual.
     </p>
-    <a class="img-fluid" href="/projetos/cicuta/fullscreen.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/cicuta/fullscreen.png'" alt="cicuta"></a>
+    <img v-gallery:cicuta v-lazyload data-err="/error.png" data-src="/projetos/cicuta/fullscreen.png" src="/projetos/cicuta/fullscreen.png" alt="cicuta">
   </div>
 </template>
 

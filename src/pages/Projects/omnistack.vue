@@ -6,13 +6,13 @@
     A mesma visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda. <br>
     Durante a semana de aula foram desenvolvidos o backend em Node/Express, frontend da aplicação web em React e a aplicação mobile em React-native.</p>
     <p class="text-center">
-      <img v-lazy="'/projetos/omnistack/logo.svg'" alt="Be the hero" class="project-logo mb-10">
-      <a class="img-fluid" href="/projetos/omnistack/figma.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/omnistack/figma.png'" alt="Be the hero - Figma"></a>
+      <img v-lazyload data-err="/error.png" data-src="/projetos/omnistack/logo.svg" src="/projetos/omnistack/logo.svg" alt="Be the hero" class="project-logo mb-10">
+      <img v-gallery:omnistack v-lazyload data-err="/error.png" data-src="/projetos/omnistack/figma.png" src="/projetos/omnistack/figma.png" alt="Be the hero - Figma">
     </p>
     <div class="legenda">Layout criado no Figma e fornecido pela Rocketseat</div>
     <div class="float-right m-10 text-center">
       <video width="300" height="600" controls>
-          <source :src="'/projetos/omnistack/emulador.webm'" type="video/webm">
+          <source src="/projetos/omnistack/emulador.webm" type="video/webm">
           Your browser does not support the video tag.
       </video><br>
     <span class="legenda">Captura de tela do emulador</span>
@@ -29,8 +29,8 @@
       <li>Do frontend criado juntamente com a aula em <strong>React</strong> também fiz um frontend em <strong>Vue</strong>;</li>
       <li>O restante das mudanças e como clonar a aplicação e roda-la em sua máquina você pode pegar em meu <a href="https://github.com/lucascnunes/be-the-hero-omnistack-11" target="_blank" rel="noopener noreferrer">GitHub</a>.</li>
     </ul>
-    <a class="img-fluid" href="/projetos/omnistack/logon.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/omnistack/logon.png'" alt="Be the hero - screen"></a>
-    <a class="img-fluid" href="/projetos/omnistack/register.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/omnistack/register.png'" alt="Be the hero - screen"></a>
+    <img v-gallery:omnistack v-lazyload data-err="/error.png" data-src="/projetos/omnistack/logon.png" src="/projetos/omnistack/logon.png" alt="Be the hero - screen">
+    <img v-gallery:omnistack v-lazyload data-err="/error.png" data-src="/projetos/omnistack/register.png" src="/projetos/omnistack/register.png" alt="Be the hero - screen">
   </div>
 </template>
 

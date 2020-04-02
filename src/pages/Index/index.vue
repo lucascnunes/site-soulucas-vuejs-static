@@ -1,5 +1,10 @@
 <template>
-  <div class="projects">
+  <div class="projects" @mouseenter="mouseEnter" @mousemove="mousemove" @mouseleave="mouseLeave">
+    <div class="scroll-downs" v-show="mouseStopped">
+      <div class="mousey">
+        <div class="scroller"></div>
+      </div>
+    </div>
     <div class="fullpage-container">
       <div class="fullpage-wp" v-fullpage="opts" ref="Projects">
         <div class="page-7 page">
@@ -84,6 +89,7 @@ export default {
   name: 'Index',
   data() {
     return {
+      mouseStopped: false,
       opts: {
         start: 0,
         dir: 'h',
@@ -94,6 +100,14 @@ export default {
         afterChange: function () {
         }
       }
+    }
+  },
+  methods: {
+    mouseEnter() {
+
+    },
+    mouseLeave() {
+      this.mouseStopped = true
     }
   },
 }
@@ -227,5 +241,40 @@ export default {
 }
 .emoji {
   width: 40px;
+}
+.scroll-downs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 50px auto auto;
+  z-index: 9999;
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }
 </style>
