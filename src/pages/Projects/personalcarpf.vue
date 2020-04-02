@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="mb-5">personal car pf</h1> 
-    <a target="_blank" href="https://personalcarpf.com.br?utm_source=soulucas.com&utm_content=link_projeto&utm_medium=referral">https://personalcarpf.com.br</a>
+    <a target="_blank" href="https://personalcarpf.com.br?utm_source=soulucas.com.br&utm_content=link_projeto&utm_medium=referral">https://personalcarpf.com.br</a>
     <p class="mt-5 mb-10">
       Projeto desenvolvido para <strong>Personal Car Pai & Filhos</strong> de Volta Redonda, Rio de Janeiro.
       <br>
