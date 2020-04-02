@@ -58,6 +58,11 @@ h1 {
   margin: 0 auto;
   width: 30% !important;
 }
+@media screen and (max-width: 600px) {
+  .project-logo {
+    width: 60% !important;
+  }
+}
 p {
   line-height: 30px;
 }

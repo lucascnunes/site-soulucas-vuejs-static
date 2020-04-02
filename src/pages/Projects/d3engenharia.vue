@@ -51,7 +51,7 @@ h1 {
 }
 .project-logo {
   margin: 0 auto;
-  width: 60%;
+  width: 30%;
 }
 @media screen and (max-width: 600px) {
   .project-logo {

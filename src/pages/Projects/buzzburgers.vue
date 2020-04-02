@@ -12,12 +12,6 @@
       <img v-gallery:buzz v-lazyload data-err="/error.png" data-src="/projetos/buzzburgers/hero.png" src="/projetos/buzzburgers/hero.png" alt="buzzburgers"/>
     </p>
     <h2 class="mt-10">
-      Missão
-    </h2>
-    <p>
-      Combinar experiência na geração de documentações para o Exército Brasileiro com a agilidade do mundo digital para gerar documentações rápidas e disponibilizando-as para imprimir aonde estiver, com as dicas e informações atualizadas que o CAC e o novato no esporte do tiro precisam.
-    </p>
-    <h2 class="mt-10">
       Plataforma
     </h2>
     <p class="mb-10">
@@ -52,6 +46,11 @@ h1 {
 .project-logo {
   margin: 0 auto;
   width: 30% !important;
+}
+@media screen and (max-width: 600px) {
+  .project-logo {
+    width: 60% !important;
+  }
 }
 p {
   line-height: 30px;
