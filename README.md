@@ -1,24 +1,3 @@
-# soulucas
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# site-soulucas-vuejs-static
+Código do meu site de portfólio.
+>>>>>>> 2f2513b944e2db1c42b1a22b0f55ddb80aa46ac0
