@@ -51,6 +51,12 @@ h1 {
 }
 .project-logo {
   margin: 0 auto;
+  width: 30% !important;
+}
+@media screen and (max-width: 800px) {
+  .project-logo {
+    width: 100% !important;
+  }
 }
 p {
   line-height: 30px;
