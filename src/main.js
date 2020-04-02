@@ -24,7 +24,7 @@ Vue.use(VueLazyload, {
   error: '/error.png'
 })
 Vue.use(VueAnalytics, {
-  id: 'UA-20421706-12',
+  id: '', //mude para o seu :)
   router
 })
 new Vue({
