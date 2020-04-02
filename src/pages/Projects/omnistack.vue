@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="mb-5">be the hero</h1>
-    <a target="_blank" href="https://github.com/lucascnunes/be-the-hero-omnistack-11?utm_source=soulucas.com.br&utm_content=link_projeto&utm_medium=referral">https://github.com/lucascnunes/be-the-hero-omnistack-11</a>
+    <a target="_blank" href="https://github.com/lucascnunes/be-the-hero-omnistack-11?utm_source=soulucas.com.br&utm_content=link_projeto&utm_medium=referral" style="line-height: 26px;">https://github.com/lucascnunes/be-the-hero-omnistack-11</a>
     <p class="mt-5 mb-10">A aplicação em Be The Hero foi feita durante a <strong>11ª Semana Omnistack da Rocketseat</strong> nos dias 23/03/2020 à 27/03/2020. <br>
     A mesma visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda. <br>
     Durante a semana de aula foram desenvolvidos o backend em Node/Express, frontend da aplicação web em React e a aplicação mobile em React-native.</p>

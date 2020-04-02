@@ -26,7 +26,7 @@ export default {
   computed: {
     position() {
       if (this.$route.name === 'Index') return { 'position': 'fixed', 'z-index': 99 }
-      else return { "position": 'relative', "z-index": 1 }
+      else return { "position": 'relative', "z-index": 1, 'margin-bottom': '30px' }
 
     }
   },
@@ -162,11 +162,12 @@ a:not(.img-fluid) {
 }
 @media screen and (max-width: 1024px) {
   .float-right {
-    display: block !important;
-    float: none;
-    width: 100%;
-    text-align: center;
-    margin: 40px auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    float: none !important;
   }
 }
 </style>
