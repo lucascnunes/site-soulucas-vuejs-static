@@ -241,6 +241,9 @@ export default {
   height: 100vh;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,15 +280,22 @@ export default {
 }
 .scroll-downs {
   position: absolute;
-  top: 0;
+  text-align:center;
+  top: -10%;
   right: 0;
   bottom: 0;
-  left: 0;
-  margin: auto 70px auto auto;
+  left: -2.5%;
+  margin: 70px auto auto auto;
   z-index: 9999;
   width :24px;
   height: 45px;
   transition: opacity 0.2s;
+}
+@media screen and (max-width: 2560px) {
+  .scroll-downs {
+    top: 0;
+  }
+
 }
 .mousey {
   margin-left: 15px;
@@ -337,7 +347,6 @@ export default {
     display: none;
   }
 }
-
 .hide {
   opacity: 0;
 }
