@@ -5,8 +5,10 @@
     <p class="mt-5 mb-10">A aplicação em Be The Hero foi feita durante a <strong>11ª Semana Omnistack da Rocketseat</strong> nos dias 23/03/2020 à 27/03/2020. <br>
     A mesma visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda. <br>
     Durante a semana de aula foram desenvolvidos o backend em Node/Express, frontend da aplicação web em React e a aplicação mobile em React-native.</p>
-    <img v-lazy="'/projetos/omnistack/logo.svg'" alt="Be the hero" class="fluid-img mb-10">
-    <a class="img-fluid" href="/projetos/omnistack/figma.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/omnistack/figma.png'" alt="Be the hero - Figma"></a>
+    <p class="text-center">
+      <img v-lazy="'/projetos/omnistack/logo.svg'" alt="Be the hero" class="project-logo mb-10">
+      <a class="img-fluid" href="/projetos/omnistack/figma.png" rel="noopener noreferrer" target="_blank"><img v-lazy="'/projetos/omnistack/figma.png'" alt="Be the hero - Figma"></a>
+    </p>
     <div class="legenda">Layout criado no Figma e fornecido pela Rocketseat</div>
     <div class="float-right m-10 text-center">
       <video width="300" height="600" controls>
@@ -55,9 +57,14 @@ h1 {
 .float-right {
   float:right;
 }
-.img-fluid{
-  width: 20%;
-  height: auto;
+.project-logo {
+  margin: 0 auto;
+  width: 30% !important;
+}
+@media screen and (max-width: 800px) {
+  .project-logo {
+    width: 100% !important;
+  }
 }
 p {
   line-height: 30px;
