@@ -1,8 +1,14 @@
 <template>
-  <div class="projects" @mouseenter="mouseEnter" @mousemove="mousemove" @mouseleave="mouseLeave">
-    <div class="scroll-downs" v-show="mouseStopped">
+  <div class="projects"  @mousemove="mousemove">
+    <div class="scroll-downs" v-bind:class="mouseStopped ? '' : 'hide'">
+      <h4 style="color: #fff; display:flex; justify-self:center;align-self:center; text-align:center;">Use o scroll para navegar</h4>
       <div class="mousey">
         <div class="scroller"></div>
+      </div>
+    </div>
+    <div class="move-sideways" v-bind:class="mouseStopped ? '' : 'hide'">
+      <div class="message">
+        <i class="arrow left"></i> arraste para os lados para navegar <i class="arrow right"></i>
       </div>
     </div>
     <div class="fullpage-container">
@@ -88,26 +94,53 @@
 export default {
   name: 'Index',
   data() {
+    var that = this
     return {
-      mouseStopped: false,
+      mouseStopped: true,
+      timeout: undefined,
+      currentPage: null,
       opts: {
         start: 0,
         dir: 'h',
-        duration: 50,
-        overflow: 'hidden',
-        beforeChange: function () {
+        duration: 500,
+        movingFlag: false,
+        beforeChange: function (current) {
+          if(current != that.currentPage) {
+            that.mousemove()
+            that.currentPage = current
+          }
         },
         afterChange: function () {
-        }
+        },
       }
     }
   },
+  mounted() {
+    // this.listenScroll()
+    this.currentPage = this.$refs.Projects.$fullpage.curIndex
+  },
+  destroyed() {
+    // this.stopListening()
+  },
   methods: {
-    mouseEnter() {
-
+    mousemove() {
+      if(this.timeout !== undefined) {
+        clearTimeout(this.timeout)
+        this.mouseStopped = false
+      }
+      this.timeout = setTimeout(() => {
+        this.mouseStopped = true
+      }, 5000)
     },
-    mouseLeave() {
-      this.mouseStopped = true
+    listenScroll() {
+      window.addEventListener('wheel', () => {
+        this.mousemove()
+      })
+    },
+    stopListening() {
+      window.removeEventListener('wheel', () => {
+        this.mousemove()
+      })
     }
   },
 }
@@ -118,8 +151,9 @@ export default {
   position: absolute;
   width: 100%;
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }
-
 .fullpage-container {
   position: relative;
   left: 0;
@@ -210,7 +244,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s;
+  transition: opacity 2s;
   z-index: 22;
 }
 .card p {
@@ -230,7 +264,6 @@ export default {
   font-size: 20px;
   font-weight: 600;
   text-transform: lowercase;
-  font-family: 'Montserrat', sans-serif;
   color: #fff;
   text-decoration: none;
   padding-bottom: 10px;
@@ -248,15 +281,17 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto 50px auto auto;
+  margin: auto 70px auto auto;
   z-index: 9999;
-  width :34px;
-  height: 55px;
+  width :24px;
+  height: 45px;
+  transition: opacity 0.2s;
 }
 .mousey {
+  margin-left: 15px;
   width: 3px;
   padding: 10px 15px;
-  height: 35px;
+  height: 40px;
   border: 2px solid #fff;
   border-radius: 25px;
   opacity: 0.75;
@@ -264,7 +299,7 @@ export default {
 }
 .scroller {
   width: 3px;
-  height: 10px;
+  height: 6px;
   border-radius: 25%;
   background-color: #fff;
   animation-name: scroll;
@@ -276,5 +311,34 @@ export default {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
+}
+@media screen and (max-width: 600px) {
+  .scroll-downs {
+    display: none;
+  }
+}
+.move-sideways {
+  position: fixed;
+  right: 0;
+  bottom: 12%;
+  left: 0;
+  margin: auto;
+  z-index: 9999;
+  width: 100%;
+  text-align: center;
+  transition: opacity 2s;
+}
+.move-sideways .message {
+  box-sizing: content-box;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .move-sideways {
+    display: none;
+  }
+}
+
+.hide {
+  opacity: 0;
 }
 </style>

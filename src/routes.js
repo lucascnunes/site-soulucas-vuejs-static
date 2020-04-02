@@ -28,7 +28,7 @@ const routes = [
     path: '/projeto/:projects',
     component: Projects,
     meta: {
-      transitionName: 'slide'
+      transitionName: 'fade'
     }
   },
   {
