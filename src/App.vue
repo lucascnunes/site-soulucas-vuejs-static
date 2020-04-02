@@ -4,7 +4,7 @@
     <transition-page>
       <router-view></router-view>
     </transition-page>
-    <footer><span>{{ new Date().getFullYear() }} © Todos os direitos reservados.</span> <a v-if="$route.name.includes(showOnRoutes)" href="#" v-scroll-to="'#navigation'"><i class="arrow up"></i></a></footer>
+    <footer v-bind:style="position"><span>{{ new Date().getFullYear() }} © Todos os direitos reservados.</span> <a v-if="$route.name.includes(showOnRoutes)" href="#" v-scroll-to="'#navigation'"><i class="arrow up"></i></a></footer>
   </div>
 </template>
 
@@ -21,6 +21,13 @@ export default {
   data() {
     return {
       showOnRoutes: ['Projects']
+    }
+  },
+  computed: {
+    position() {
+      if (this.$route.name === 'Index') return { 'position': 'fixed', 'z-index': 99 }
+      else return { "position": 'relative', "z-index": 1 }
+
     }
   },
 }
@@ -75,7 +82,6 @@ footer {
   align-items: center;
   margin: 0 40px;;
   bottom: 2em;
-  z-index: 99;
 }
 footer span {
   color: #fff;
